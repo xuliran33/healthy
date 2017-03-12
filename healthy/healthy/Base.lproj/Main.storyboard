@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2K-ja-KVK">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="O0u-dw-kmN"/>
+                                    <constraint firstAttribute="width" constant="31" id="e0G-81-U7d"/>
+                                </constraints>
+                                <state key="normal" title="记步"/>
+                                <connections>
+                                    <action selector="stepsClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RQa-8a-RFg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U37-RF-e6D">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="gHI-Gk-A44"/>
+                                    <constraint firstAttribute="height" constant="30" id="hoj-jc-uF7"/>
+                                </constraints>
+                                <state key="normal" title="行走距离"/>
+                                <connections>
+                                    <action selector="distanceClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rMh-7a-FoB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xte-Fj-QDE">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="distances" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYk-zR-353">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="m2K-ja-KVK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="81" id="3OX-hZ-SG5"/>
+                            <constraint firstItem="m2K-ja-KVK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7rl-PC-DZm"/>
+                            <constraint firstItem="Xte-Fj-QDE" firstAttribute="top" secondItem="U37-RF-e6D" secondAttribute="bottom" constant="46" id="SWq-nw-942"/>
+                            <constraint firstItem="U37-RF-e6D" firstAttribute="top" secondItem="m2K-ja-KVK" secondAttribute="bottom" constant="41" id="VlF-t0-ZJD"/>
+                            <constraint firstItem="oYk-zR-353" firstAttribute="centerX" secondItem="Xte-Fj-QDE" secondAttribute="centerX" id="h0B-VX-5Yi"/>
+                            <constraint firstItem="U37-RF-e6D" firstAttribute="centerX" secondItem="m2K-ja-KVK" secondAttribute="centerX" id="r3Z-mh-5EZ"/>
+                            <constraint firstItem="oYk-zR-353" firstAttribute="top" secondItem="Xte-Fj-QDE" secondAttribute="bottom" constant="54" id="rUj-SI-GRX"/>
+                            <constraint firstItem="Xte-Fj-QDE" firstAttribute="centerX" secondItem="U37-RF-e6D" secondAttribute="centerX" id="tuE-uh-xOE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="distanceLabel" destination="oYk-zR-353" id="3TA-ta-1A5"/>
+                        <outlet property="stepLabel" destination="Xte-Fj-QDE" id="1bF-zU-6eP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
